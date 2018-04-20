@@ -22,9 +22,9 @@ def add_dictionary( info_tuple ):
     '''
     word, index = info_tuple
     try:
-        match_words[ word.lower() ].append(index)
+        match_words[ word.lower() ].add(index)
     except KeyError:
-        match_words[ word.lower() ] = [ index ]
+        match_words[ word.lower() ] = set( [ index ] )
 
 
 def extract_words( text , id_col ):
@@ -49,12 +49,12 @@ def search( words ):
     '''
     if ( "AND" in words ):
         list_of_words = map( lambda x: x.strip(), words.split("AND") )
-        return reduce( lambda x,y : list( set(x) & set(y) ), [ match_words[word.lower()] for word in list_of_words ]      )
+        return reduce( lambda x,y : list( x & y ) , [ match_words[word.lower()] for word in list_of_words ] )
     elif ("OR" in words ):
         list_of_words = map(lambda x: x.strip(), words.split("OR"))
-        return reduce( lambda x,y : list( set(x + y) ), [ match_words[word.lower()] for word in list_of_words ] )
+        return reduce( lambda x,y : list( x | y ) , [ match_words[word.lower()] for word in list_of_words ] )
     else:
-        return match_words[words]
+        return list( match_words[words] )
 
 def debug_test(text, expected_value):
 	result =  len(search(text)) == expected_value
