@@ -12,6 +12,7 @@ This repository was made to learn about the classic concepts of text information
 ### How to turn this system most efficiently
  - How to determine what document is most similar to the query?
  - Have different ways to determine similarity between documents?
+ - Have some way to suggest new queries?
  - How to evaluate this efficiency?
 
 ### How to ranking Web Pages?
