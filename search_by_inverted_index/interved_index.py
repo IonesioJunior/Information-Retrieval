@@ -78,7 +78,7 @@ def test_search():
 
 
 if __name__ == "__main__":
-    file_csv = pandas.read_csv("noticias_estadao.csv")
+    file_csv = pandas.read_csv("database/noticias_estadao.csv")
     text = file_csv.titulo + " " + file_csv.conteudo
     extract_words(text,file_csv.idNoticia)
     test_search()

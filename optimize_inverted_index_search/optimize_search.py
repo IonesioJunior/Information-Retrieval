@@ -164,8 +164,8 @@ def mapk(actual, predicted, k=10):
 
 
 def main():
-    corpus = Corpus("estadao_noticias_eleicao.csv")
-    ground_truth = pandas.read_csv("gabarito.csv", encoding="utf-8")
+    corpus = Corpus("database/estadao_noticias_eleicao.csv")
+    ground_truth = pandas.read_csv("database/gabarito.csv", encoding="utf-8")
 
     #Ground Truth results
     google_results = map(lambda x: ast.literal_eval(x), ground_truth.google)
