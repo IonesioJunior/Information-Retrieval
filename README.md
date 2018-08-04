@@ -1,6 +1,6 @@
 # Information Retrieval
 <p align="center"><img src = "information_retrieval.jpg" width = "500"></p>
-This repository was made to learn about the classic concepts of text information retrieval (indexing, retrieval by query, etc) and evaluate this systems.
+Information Retrieval is a concept that wants to study about how we can extract some information of text documents and how we can represent this relation between words/phrases and documents.
 
 ## What Questions we want to ask?
 
