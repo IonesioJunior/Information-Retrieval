@@ -1,5 +1,5 @@
 # Information Retrieval
-<p align="center"><img src = "information_retrieval.jpg" width = "500"></p>
+<p align="center"><img src = "resources/information_retrieval.jpg" width = "500"></p>
 Information Retrieval is a concept that wants to study about how we can extract some information of text documents and how we can represent this relation between words/phrases and documents.
 
 ## What Questions we want to ask?
